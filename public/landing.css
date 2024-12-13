@@ -258,24 +258,19 @@ body {
   overflow: hidden;
 }
 
-
 .recommended-grid {
   display: flex;
   flex-wrap: nowrap;
-  transition: transform 0.2s ;
+  transition: transform 0.5s ease-out;
 }
 
 .recommended-card {
-  flex: 1 0 33%; /* Show 3 cards at a time, adjust to 50% for 2 cards */
-  box-sizing: border-box;
-  padding: 10px;
-  max-width: 33%; /* Adjust to 50% for 2 cards */
-  text-align: center;
-  
+  flex: 1 0 auto;
+  min-width: 25%; /* Adjust to fit visible area */
 }
 
 .recommended-card img {
-  width: 100%; /* Ensure images fill the container */
+  width: 20vw; /* Ensure images fill the container */
   height: 20vh;
   border-radius: 10px;
 }
@@ -286,7 +281,8 @@ body {
   border-radius: 8px;
   margin-top: 10px; /* Space between image and details */
   font-size: 14px; /* Reduced font size */
-  text-align: left; /* Align text to left */
+  text-align: left;
+  padding-left: 10%; /* Align text to left */
 }
 
 .card-details h6 {
@@ -299,16 +295,14 @@ body {
   font-size: 14px; /* Reduced font size for details */
 }
 
-.
-
 @media (max-width: 768px) {
   .container {
     width: 90%;
   }
 
   .recommended-card {
-    flex: 1 0 50%; /* Adjust to show 2 cards at a time on smaller screens */
-    max-width: 50%;
+    flex: 1 0 35%; /* Adjust to show 2 cards at a time on smaller screens */
+    max-width: 50%; /* Ensure the width matches the flex-basis */
   }
 }
 

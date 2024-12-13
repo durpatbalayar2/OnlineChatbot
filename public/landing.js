@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showNextSlide() {
         index++;
-        if (index >= totalCards) index = 0;
+        if (index >= totalCards) index =0;
         slider.style.transform = `translateX(${-index * cardWidth}px)`;
     }
 
-    setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+    setInterval(showNextSlide,3000); // Change slide every 3 seconds
 });
